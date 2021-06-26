@@ -1,0 +1,138 @@
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+
+  /* primary colors */
+  --pr--light-red: hsl(356, 100%, 66%);
+  --pri-v-light-red: hsl(355, 100%, 74%);
+  --pri-dark-blue: hsl(208, 49%, 24%);
+
+  /* Neutral colors*/
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%);
+  --dark-grayish-blue: hsl(207, 13%, 34%);
+  --dark-black-blue: hsl(240, 10%, 16%);
+
+  /*  gradient color */
+  --gc-v-light-red: hsl(13, 100%, 72%);
+  --gc-light-red: hsl(353, 100%, 62%);
+
+  /* primary fonts */
+  --pri-font: 'Poppins', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+ul  {
+  list-style: none;
+}
+
+header {
+  background: linear-gradient(
+    110deg,
+    var(--pri-v-light-red),
+    var(--pr--light-red)
+  );
+  border-radius: 0 0 0 7rem;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  background-position: center;
+  font-family: var(--pri-font);
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem  2rem 0;
+}
+
+/* Mobile navigation  */
+
+.hamburger {
+  cursor: pointer;
+}
+
+.nav-section {
+  position: fixed;
+  left: 13%;
+  right: 13%;
+  top: 15%;
+  display: none;
+}
+
+.nav-section.is-open {
+  display: block;
+}
+
+.nav-container {
+  background-color: var(--white);
+  border-radius: 0.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease-out;
+  font-family: var(--pri-font);
+  font-size: 1rem;
+  font-weight:600;
+}
+.nav-container a:hover {
+  opacity: 0.5;
+}
+.nav-1 {
+  padding: 2rem;
+}
+.nav-1 * + * {
+  margin-top: 0.5em;
+}
+
+/* Navigation 2 */
+
+.nav-2 {
+  border-top: 1px solid var(--grayish-blue);
+  width: 80%;
+  text-align: center;
+  padding: 2rem 0 1rem;
+  
+}
+.nav-2 a {
+  display: block;
+  color:var(--dark-black-blue);
+}
+
+.nav-2 * + * {
+  margin-top: 1em;
+}
+.nav-2  button {
+  border:none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50vw;
+	background: linear-gradient(90deg, var(--gc-v-light-red), var(--gc-light-red));
+}
+.nav-2 button:hover {
+  opacity: 0.5;
+}
+
+.link {
+  color: var(--dark-black-blue);
+}
+
+/* Sub menus */
